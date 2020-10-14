@@ -1,1 +1,9 @@
-<p>list works!</p>
+    <h1>Places</h1>
+
+    <ul *ngIf="places">
+        <li *ngFor="let place of places | slice:9:23; let i=index">
+            <p class="name">{{ place.name }}</p>
+            <p class="capital">{{ place.capital }}</p>
+            <img src={{place.flag}} alt="pic" class="img" />
+        </li>
+    </ul>
